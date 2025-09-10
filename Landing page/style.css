@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 40px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+.company-name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar a:hover {
+  color: #ff9800;
+}
+
+.hero {
+  height: 100vh;
+  background: url('bg1.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+.hero h2 {
+  font-size: 40px;
+  animation: slideInDown 1.5s ease-out;
+}
+.hero p {
+  font-size: 18px;
+  margin: 20px 0;
+  animation: slideInUp 1.5s ease-out;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #e67e00;
+}
+
+.projects {
+  background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(246, 83, 83, 0.1);
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.project-card a:hover {
+  background: #e67e00;
+}
+
+.section {
+  padding: 80px 40px;
+  text-align: center;
+  background: #f9f9f9;
+  animation: fadeIn 1s ease-in-out;
+}
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.section p,
+.section ul {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #444;
+}
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  min-width: 250px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+.contact input,
+.contact textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.owner-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+.owner-photo {
+  width: 200px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.owner-details {
+  max-width: 400px;
+  text-align: left;
+}
+.owner-details h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #222;
+}
+.owner-details p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 6px;
+}
+.owner-contact a {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: 500;
+}
+.owner-contact a:hover {
+  text-decoration: underline;
+}
+
+
+footer {
+  text-align: center;
+  background: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes slideInDown {
+  from {transform: translateY(-50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+@keyframes slideInUp {
+  from {transform: translateY(50px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+.pulse {
+  animation: pulseAnimation 2s infinite;
+}
+@keyframes pulseAnimation {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.05);}
+  100% {transform: scale(1);}
+}
